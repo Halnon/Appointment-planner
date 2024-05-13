@@ -47,15 +47,27 @@ export const ContactsPage = ({contacts, addContact}) => {
     }
  }, [name, contacts, duplicate])
 
-  return (
-    <div>
-      <section>
-        <h2>Add Contact</h2> 
-      </section>
-      <hr />
-      <section>
-        <h2>Contacts</h2>
-      </section>
-    </div>
-  );
+ return (
+  <div>
+    <section>
+      <h2>Add Contact</h2> 
+      <ContactForm
+        name={name}
+        setName={setName}
+        phone={phone}
+        setPhone={setPhone}
+        email={email}
+        setEmail={setEmail}
+        handleSubmit={handleSubmit}
+      />
+    </section>
+    <hr />
+    <section>
+      <h2>Contacts</h2>
+      <TileList
+      tiles={contacts}
+      />
+    </section>
+  </div>
+);
 };
