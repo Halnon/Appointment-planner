@@ -10,8 +10,8 @@ function App() {
   contacts and appointments 
   */
 
-  const {contacts, setContacts} = useState([]);
-  const {appointments, setAppointments} = useState([]);
+  const [contacts, setContacts] = useState([]);
+  const [appointments, setAppointments] = useState([]);
 
   /*
   Implement functions to add data to
@@ -36,7 +36,7 @@ function App() {
         name: name,
         contact: contact,
         date: date,
-        time: time
+        time: time,
       },
     ]);
   };
