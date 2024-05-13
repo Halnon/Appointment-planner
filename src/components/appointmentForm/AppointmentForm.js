@@ -23,7 +23,7 @@ export const AppointmentForm = ({
 }) => {
 
   const contactNames = useMemo(() => {
-    return contacts.map((contact) => contact.name);
+    return contacts ? contacts.map((contact) => contact.name) : null;
   }, [contacts]);
 
   return (
