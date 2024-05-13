@@ -11,7 +11,7 @@ function App() {
   */
 
   const {contacts, setContacts} = useState([]);
-  const {appointments, setAppoinments} = useState([]);
+  const {appointments, setAppointments} = useState([]);
 
   /*
   Implement functions to add data to
@@ -30,7 +30,7 @@ function App() {
   };
 
   const addAppointment = (name, contact, date, time) => {
-    setAppoinments([
+    setAppointments([
       ...appointments,
       {
         name: name,
