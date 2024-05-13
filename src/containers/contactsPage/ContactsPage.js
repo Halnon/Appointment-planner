@@ -28,7 +28,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
       return false;
     };
 
-    if (nameIsDuplicate) {
+    if (nameIsDuplicate()) {
       setDuplicate(true);
     } else {
       setDuplicate(false);
