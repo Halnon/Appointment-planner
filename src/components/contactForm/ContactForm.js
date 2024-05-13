@@ -18,7 +18,7 @@ export const ContactForm = ({
             name='name'
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeHolder='Contact Name'
+            placeholder='Contact Name'
             aria-label='Contact Name'
           />
         </label>
@@ -30,7 +30,7 @@ export const ContactForm = ({
             pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            placeHolder='Contact Phone'
+            placeholder='Contact Phone'
             aria-label='Contact Phone'
           />
         </label>
@@ -41,7 +41,7 @@ export const ContactForm = ({
             name='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeHolder='Contact Email'
+            placeholder='Contact Email'
             aria-label='Contact Email'
           />
         </label>
