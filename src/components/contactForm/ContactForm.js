@@ -13,43 +13,43 @@ export const ContactForm = ({
     <form onSubmit={handleSubmit}>
       <label>
         <input
-          type='text' 
-          name='name'
+          type="text"
+          name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          placeholder='Contact Name'
-          aria-label='Contact Name'
+          placeholder="Contact Name"
+          aria-label="Contact Name"
         />
       </label>
-      <hr/>
+      <br />
       <label>
         <input
-          type='tel'
-          name='phone'
-          //regex fir UK mob numbers
-          pattern="^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$"
+          type="tel"
+          name="phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           required
-          placeholder='Contact Phone (+447222555555 | +44 7222 555 555 | (0722) 5555555 #2222)'
-          aria-label='Contact Phone'
+          // regex is for US phone numbers
+          pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
+          placeholder="Contact Phone (###-###-####)"
+          aria-label="Contact Phone"
         />
       </label>
-      <hr/>
+      <br />
       <label>
         <input
-          type='email' 
-          name='email'
+          type="email"
+          name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          placeholder='Contact Email'
-          aria-label='Contact Email'
+          placeholder="Contact Email"
+          aria-label="Contact Email"
         />
       </label>
-      <hr/>
-      <input type='submit' value='Add Contact' aria-label='Add Contact'/>
+      <br />
+      <input type="submit" value="Add Contact" aria-label="Add Contact"/>
     </form>
   );
 };
